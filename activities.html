@@ -1,0 +1,785 @@
+<style>h1{font-size: 20px;} table { border-collapse: collapse;} table td,table th{ border: 1px solid black;width:200px;padding: 0 10px;}</style>
+<style>.title{margin-top:30px; margin-bottom: 10px}</style>
+<h1>Activity "Visit Webpage" (id: 1)</h1>
+<p><b>Description:</b> User visits web page<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Client IP Address</td><td>string</td></tr>
+<tr><td>Query Parameters</td><td>string</td></tr>
+<tr><td>Referrer URL</td><td>string</td></tr>
+<tr><td>Search Engine</td><td>string</td></tr>
+<tr><td>Search Query</td><td>string</td></tr>
+<tr><td>User Agent</td><td>string</td></tr>
+</table>
+<h1>Activity "Fill Out Form" (id: 2)</h1>
+<p><b>Description:</b> User fills out and submits form on web page<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Webform ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Client IP Address</td><td>string</td></tr>
+<tr><td>Query Parameters</td><td>string</td></tr>
+<tr><td>Referrer URL</td><td>string</td></tr>
+<tr><td>User Agent</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Click Link" (id: 3)</h1>
+<p><b>Description:</b> User clicks a link on a page<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Link ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Client IP Address</td><td>string</td></tr>
+<tr><td>Query Parameters</td><td>string</td></tr>
+<tr><td>Referrer URL</td><td>string</td></tr>
+<tr><td>User Agent</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Send Email" (id: 6)</h1>
+<p><b>Description:</b> Send campaign email to lead/contact<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+</table>
+<h1>Activity "Email Delivered" (id: 7)</h1>
+<p><b>Description:</b> Campaign email is delivered to lead/contact<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+</table>
+<h1>Activity "Email Bounced" (id: 8)</h1>
+<p><b>Description:</b> Campaign email is bounced for a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Category</td><td>string</td></tr>
+<tr><td>Details</td><td>string</td></tr>
+<tr><td>Email</td><td>string</td></tr>
+<tr><td>Subcategory</td><td>string</td></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+</table>
+<h1>Activity "Unsubscribe Email" (id: 9)</h1>
+<p><b>Description:</b> User unsubscribed from marketing emails<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Client IP Address</td><td>string</td></tr>
+<tr><td>Form Fields</td><td>text</td></tr>
+<tr><td>Query Parameters</td><td>string</td></tr>
+<tr><td>Referrer URL</td><td>string</td></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+<tr><td>User Agent</td><td>string</td></tr>
+<tr><td>Webform ID</td><td>integer</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Open Email" (id: 10)</h1>
+<p><b>Description:</b> User opens email associated with a campaign<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Device</td><td>string</td></tr>
+<tr><td>Is Mobile Device</td><td>boolean</td></tr>
+<tr><td>Platform</td><td>string</td></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+<tr><td>User Agent</td><td>string</td></tr>
+</table>
+<h1>Activity "Click Email" (id: 11)</h1>
+<p><b>Description:</b> User clicks on a link in a campaign email<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Device</td><td>string</td></tr>
+<tr><td>Is Mobile Device</td><td>boolean</td></tr>
+<tr><td>Link</td><td>string</td></tr>
+<tr><td>Link ID</td><td>string</td></tr>
+<tr><td>Platform</td><td>string</td></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+<tr><td>User Agent</td><td>string</td></tr>
+</table>
+<h1>Activity "New Lead" (id: 12)</h1>
+<p><b>Description:</b> New lead is added to the lead database<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Created Date</td><td>date</td></tr>
+<tr><td>Form Name</td><td>string</td></tr>
+<tr><td>Lead Source</td><td>string</td></tr>
+<tr><td>List Name</td><td>string</td></tr>
+<tr><td>SFDC Type</td><td>string</td></tr>
+<tr><td>Source Type</td><td>string</td></tr>
+</table>
+<h1>Activity "Change Data Value" (id: 13)</h1>
+<p><b>Description:</b> Change attribute value for a lead, company, opportunity, etc.<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Attribute Name</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Value</td><td>string</td></tr>
+<tr><td>Old Value</td><td>string</td></tr>
+<tr><td>Reason</td><td>string</td></tr>
+<tr><td>Source</td><td>string</td></tr>
+</table>
+<h1>Activity "Sync Lead to SFDC" (id: 19)</h1>
+<p><b>Description:</b> Sync lead to salesforce.com<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Assign To</td><td>string</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "Convert Lead" (id: 21)</h1>
+<p><b>Description:</b> Convert the lead in salesforce.com to an opportunity<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Assign To</td><td>string</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "Change Score" (id: 22)</h1>
+<p><b>Description:</b> Modify the value of a score field<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Score Name</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Change Value</td><td>string</td></tr>
+<tr><td>New Value</td><td>integer</td></tr>
+<tr><td>Priority</td><td>integer</td></tr>
+<tr><td>Relative Score</td><td>integer</td></tr>
+<tr><td>Relative Urgency</td><td>integer</td></tr>
+<tr><td>Urgency</td><td>float</td></tr>
+</table>
+<h1>Activity "Change Owner" (id: 23)</h1>
+<p><b>Description:</b> Change the Sales owner for the lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Owner</td><td>string</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Old Owner</td><td>string</td></tr>
+</table>
+<h1>Activity "Add to List" (id: 24)</h1>
+<p><b>Description:</b> Add this lead to the list<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>List ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "Remove from List" (id: 25)</h1>
+<p><b>Description:</b> Remove this lead from the list<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>List ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "SFDC Activity" (id: 26)</h1>
+<p><b>Description:</b> New activity was logged in salesforce.com<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Subject</td><td>string</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Activity Owner</td><td>string</td></tr>
+<tr><td>Description</td><td>string</td></tr>
+<tr><td>Due Date</td><td>date</td></tr>
+<tr><td>Is Task</td><td>boolean</td></tr>
+<tr><td>Priority</td><td>string</td></tr>
+<tr><td>Status</td><td>string</td></tr>
+</table>
+<h1>Activity "Email Bounced Soft" (id: 27)</h1>
+<p><b>Description:</b> Campaign email is bounced soft for a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Category</td><td>string</td></tr>
+<tr><td>Details</td><td>string</td></tr>
+<tr><td>Email</td><td>string</td></tr>
+<tr><td>Subcategory</td><td>string</td></tr>
+<tr><td>Test Variant</td><td>integer</td></tr>
+</table>
+<h1>Activity "Delete Lead from SFDC" (id: 29)</h1>
+<p><b>Description:</b> Delete lead from salesforce.com<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Delete in Marketo</td><td>boolean</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "SFDC Activity Updated" (id: 30)</h1>
+<p><b>Description:</b> Activity was updated in salesforce.com<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Subject</td><td>string</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Activity Owner</td><td>string</td></tr>
+<tr><td>Description</td><td>string</td></tr>
+<tr><td>Due Date</td><td>date</td></tr>
+<tr><td>Is Task</td><td>boolean</td></tr>
+<tr><td>Priority</td><td>string</td></tr>
+<tr><td>Status</td><td>string</td></tr>
+</table>
+<h1>Activity "Add to Opportunity" (id: 34)</h1>
+<p><b>Description:</b> Add to an Opportunity<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Oppty ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Is Primary</td><td>boolean</td></tr>
+<tr><td>Role</td><td>string</td></tr>
+</table>
+<h1>Activity "Remove from Opportunity" (id: 35)</h1>
+<p><b>Description:</b> Remove from an Opportunity<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Oppty ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Is Primary</td><td>boolean</td></tr>
+<tr><td>Role</td><td>string</td></tr>
+</table>
+<h1>Activity "Update Opportunity" (id: 36)</h1>
+<p><b>Description:</b> Update an Opportunity<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Oppty ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Attribute Name</td><td>string</td></tr>
+<tr><td>New Value</td><td>mixed</td></tr>
+<tr><td>Old Value</td><td>mixed</td></tr>
+</table>
+<h1>Activity "Send Alert" (id: 38)</h1>
+<p><b>Description:</b> Send alert email about a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Send To List</td><td>email_list</td></tr>
+<tr><td>Send To Owner</td><td>string</td></tr>
+</table>
+<h1>Activity "Send Sales Email" (id: 39)</h1>
+<p><b>Description:</b> Send email using Sales View, Outlook Plug-in<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Artifact ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Sent by</td><td>string</td></tr>
+<tr><td>Template ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Open Sales Email" (id: 40)</h1>
+<p><b>Description:</b> User opens sales email<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Artifact ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Sent by</td><td>string</td></tr>
+</table>
+<h1>Activity "Click Sales Email" (id: 41)</h1>
+<p><b>Description:</b> User clicks on a link in a sales email<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Artifact ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Link</td><td>string</td></tr>
+<tr><td>Sent by</td><td>string</td></tr>
+</table>
+<h1>Activity "Add to SFDC Campaign" (id: 42)</h1>
+<p><b>Description:</b> Add to a sfdc campaign<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Campaign ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Status</td><td>string</td></tr>
+</table>
+<h1>Activity "Remove from SFDC Campaign" (id: 43)</h1>
+<p><b>Description:</b> Remove from a sfdc campaign<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Campaign ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Status</td><td>string</td></tr>
+</table>
+<h1>Activity "Change Status in SFDC Campaign" (id: 44)</h1>
+<p><b>Description:</b> Change a Status in a sfdc campaign<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Campaign ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Status</td><td>string</td></tr>
+<tr><td>Old Status</td><td>string</td></tr>
+</table>
+<h1>Activity "Receive Sales Email" (id: 45)</h1>
+<p><b>Description:</b> Receive email using Sales View, Outlook Plug-in<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Artifact ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Received by</td><td>string</td></tr>
+</table>
+<h1>Activity "Interesting Moment" (id: 46)</h1>
+<p><b>Description:</b> Lead has an interesting moment<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Type</td><td>string</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Date</td><td>datetime</td></tr>
+<tr><td>Description</td><td>string</td></tr>
+<tr><td>Source</td><td>string</td></tr>
+</table>
+<h1>Activity "Request Campaign" (id: 47)</h1>
+<p><b>Description:</b> Campaign membership is requested for lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Campaign ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Source</td><td>enum</td></tr>
+</table>
+<h1>Activity "Sales Email Bounced" (id: 48)</h1>
+<p><b>Description:</b> Sales email bounced<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Artifact ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Category</td><td>string</td></tr>
+<tr><td>Details</td><td>string</td></tr>
+<tr><td>Email</td><td>string</td></tr>
+<tr><td>Sent by</td><td>string</td></tr>
+<tr><td>Subcategory</td><td>string</td></tr>
+</table>
+<h1>Activity "Change Lead Partition" (id: 100)</h1>
+<p><b>Description:</b> Lead partition is changed for a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Partition ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Old Partition ID</td><td>integer</td></tr>
+<tr><td>Reason</td><td>string</td></tr>
+</table>
+<h1>Activity "Change Revenue Stage" (id: 101)</h1>
+<p><b>Description:</b> Modify the value of a revenue stage field<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Model ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Stage ID</td><td>integer</td></tr>
+<tr><td>Old Stage ID</td><td>integer</td></tr>
+<tr><td>Reason</td><td>string</td></tr>
+<tr><td>SLA Expiration</td><td>datetime</td></tr>
+</table>
+<h1>Activity "Change Revenue Stage Manually" (id: 102)</h1>
+<p><b>Description:</b> Revenue stage is changed manually (e.g. Lead Database or Salesforce)<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "Change Status in Progression" (id: 104)</h1>
+<p><b>Description:</b> Change a Status in an program progression<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Program ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Acquired By</td><td>boolean</td></tr>
+<tr><td>New Status ID</td><td>integer</td></tr>
+<tr><td>Old Status ID</td><td>integer</td></tr>
+<tr><td>Reason</td><td>string</td></tr>
+<tr><td>Success</td><td>boolean</td></tr>
+</table>
+<h1>Activity "Enrich with Data.com" (id: 106)</h1>
+<p><b>Description:</b> Enrich a lead with information from Data.com<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Data.com Status</td><td>string</td></tr>
+</table>
+<h1>Activity "Change Segment" (id: 108)</h1>
+<p><b>Description:</b> Change segment (within a segmentation) for a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Segmentation ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Segment ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Call Webhook" (id: 110)</h1>
+<p><b>Description:</b> Call Webhook<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Webhook</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Error Type</td><td>integer</td></tr>
+<tr><td>Response</td><td>string</td></tr>
+</table>
+<h1>Activity "Sent Forward to Friend Email" (id: 111)</h1>
+<p><b>Description:</b> User Forwards email to friend<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Lead ID</td><td>string</td></tr>
+</table>
+<h1>Activity "Received Forward to Friend Email" (id: 112)</h1>
+<p><b>Description:</b> User receives forwarded email from friend<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Mailing ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Lead ID</td><td>string</td></tr>
+</table>
+<h1>Activity "Add to Nurture" (id: 113)</h1>
+<p><b>Description:</b> add a lead to a nurture program and assign a track it to the lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Program ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Track ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Change Nurture Track" (id: 114)</h1>
+<p><b>Description:</b> change the nurture track for a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Program ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Track ID</td><td>integer</td></tr>
+<tr><td>Previous Track ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Change Nurture Cadence" (id: 115)</h1>
+<p><b>Description:</b> Change the nurture cadence for a lead<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Program ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Nurture Cadence</td><td>string</td></tr>
+<tr><td>Previous Nurture Cadence</td><td>string</td></tr>
+</table>
+<h1>Activity "Share Content" (id: 400)</h1>
+<p><b>Description:</b> Shares<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Share Message</td><td>string</td></tr>
+<tr><td>Social App Type ID</td><td>integer</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Vote in Poll" (id: 401)</h1>
+<p><b>Description:</b> Votes<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Vote Choice</td><td>integer</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Sign Up for Referral Offer" (id: 402)</h1>
+<p><b>Description:</b> Signs Up<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App Type ID</td><td>integer</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Achieve Goal in Referral" (id: 403)</h1>
+<p><b>Description:</b> Wins<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App Type ID</td><td>integer</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Click Shared Link" (id: 405)</h1>
+<p><b>Description:</b> Clicks<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Sharer ID</td><td>integer</td></tr>
+<tr><td>Social App Type ID</td><td>integer</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Win Sweepstakes" (id: 406)</h1>
+<p><b>Description:</b> Wins Sweepstakes<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Drawing Date</td><td>date</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Enter Sweepstakes" (id: 407)</h1>
+<p><b>Description:</b> Enters Sweepstakes<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Disqualify Sweepstakes" (id: 408)</h1>
+<p><b>Description:</b> Disqualifies Sweepstakes<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Disqualified Reason</td><td>string</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Earn Entry in Social App" (id: 409)</h1>
+<p><b>Description:</b> Earns Entry in Social App<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Referee Email</td><td>string</td></tr>
+<tr><td>Referred Type</td><td>string</td></tr>
+<tr><td>Social App Type ID</td><td>integer</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Refer to Social App" (id: 410)</h1>
+<p><b>Description:</b> Refers to Social App<p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Social App ID</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+<table style='margin-bottom: 50px;'>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Referee Email</td><td>string</td></tr>
+<tr><td>Referred Type</td><td>string</td></tr>
+<tr><td>Social App Type ID</td><td>integer</td></tr>
+<tr><td>Social Network</td><td>string</td></tr>
+<tr><td>Webpage ID</td><td>integer</td></tr>
+</table>
+<h1>Activity "Add to Case" (id: 1001)</h1>
+<p><b>Description:</b> <p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>Case ObjRef</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
+<h1>Activity "Add to New Country" (id: 1003)</h1>
+<p><b>Description:</b> <p>
+<p class='title'><b> Primary Attributes:</b></p>
+<table>
+<tr><th>Name</th><th>Type</th></tr>
+<tr><td>New Country ObjRef</td><td>integer</td></tr>
+</table>
+<p class='title'><b> Attributes:</b></p>
+</table>
