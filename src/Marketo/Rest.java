@@ -19,4 +19,11 @@ public class Rest {
     	response = handler.get(urlStr);
 		return response;
 	}
+	
+	public String postLeads(String postArguments){
+		String response = "";
+		String urlStr="/rest/v1/leads.json";
+    	response = handler.post(urlStr,postArguments);
+		return response;
+	}	
 }
